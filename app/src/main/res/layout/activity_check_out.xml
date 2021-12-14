@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_app_grident"
+    tools:context=".ui.CheckOutActivity">
+
+
+    <ImageView
+        android:id="@+id/backBtnImage"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="22dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/go_back_btn_img" />
+
+    <TextView
+        android:id="@+id/textViewCheckOut"
+        android:layout_width="355dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="20dp"
+        android:text="Checkout"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/backBtnImage"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCheckOut">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/textViewOrderDetails"
+                android:layout_width="173dp"
+                android:layout_height="27dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="22dp"
+                android:text="Order details"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="392dp"
+                android:layout_height="162dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_details"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewOrderDetails">
+
+                <ImageView
+                    android:id="@+id/orderedItemImage"
+                    android:layout_width="116dp"
+                    android:layout_height="132dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="18dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/booktwo" />
+
+                <TextView
+                    android:id="@+id/textViewOrderItemName"
+                    android:layout_width="355dp"
+                    android:layout_height="42dp"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Steal Like an Artist"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toEndOf="@+id/orderedItemImage"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textViewItemPrice"
+                    android:layout_width="175dp"
+                    android:layout_height="33dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="32dp"
+                    android:text="459"
+                    android:textColor="#FFFA7F"
+                    android:textSize="24sp"
+                    app:layout_constraintStart_toEndOf="@+id/orderedItemImage"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewOrderItemName" />
+
+                <ImageView
+                    android:id="@+id/minusIcon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/orderedItemImage"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewItemPrice"
+                    app:srcCompat="@drawable/minus" />
+
+                <TextView
+                    android:id="@+id/textViewQuantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="27dp"
+                    android:layout_marginStart="9dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:text="1"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/minusIcon"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewItemPrice" />
+
+                <ImageView
+                    android:id="@+id/plusIcon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="9dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textViewQuantity"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewItemPrice"
+                    app:srcCompat="@drawable/plus" />
+
+                <LinearLayout
+                    android:id="@+id/bucketIcon"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="136dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/circular_bg"
+                    android:gravity="center"
+                    app:layout_constraintStart_toEndOf="@+id/plusIcon"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewItemPrice">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        app:srcCompat="@drawable/empty" />
+
+                </LinearLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textViewAddress"
+                android:layout_width="173dp"
+                android:layout_height="27dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="31dp"
+                android:text="Delivery Address"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout3"
+                android:layout_width="392dp"
+                android:layout_height="225dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_details"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewAddress">
+
+                <TextView
+                    android:id="@+id/textViewUseName"
+                    android:layout_width="114dp"
+                    android:layout_height="19dp"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginTop="12dp"
+                    android:text="Aditya Bhandari"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textViewUserAddress"
+                    android:layout_width="200dp"
+                    android:layout_height="95dp"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginTop="3dp"
+                    android:text="ZXC Apartment,  3rd floor Paschim Vihar New Delhi, Delhi,110026 Phone number:7865423989"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewUseName" />
+
+                <TextView
+                    android:id="@+id/textViewEditAddress"
+                    android:layout_width="322dp"
+                    android:layout_height="28dp"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginTop="13dp"
+                    android:background="@drawable/bg_details"
+                    android:backgroundTint="#EE6C4D"
+                    android:gravity="center"
+                    android:text="Edit Address"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewUserAddress" />
+
+                <TextView
+                    android:id="@+id/textViewAddAddress"
+                    android:layout_width="322dp"
+                    android:layout_height="28dp"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_details"
+                    android:backgroundTint="#EEE7E7"
+                    android:gravity="center"
+                    android:text="Add  Address"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewEditAddress" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textViewPaymentOption"
+                android:layout_width="173dp"
+                android:layout_height="27dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="21dp"
+                android:text="Payment Option"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout3" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="392dp"
+                android:layout_height="158dp"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/bg_details"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewPaymentOption">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout6"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginTop="18dp"
+                    android:background="@drawable/circular_bg"
+                    android:backgroundTint="#84FFF0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout7"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginTop="73dp"
+                    android:background="@drawable/circular_bg"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout6">
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ImageView
+                    android:id="@+id/imageViewCard"
+                    android:layout_width="51dp"
+                    android:layout_height="34dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginStart="13dp"
+                    app:layout_constraintStart_toEndOf="@+id/constraintLayout6"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/visa" />
+
+                <ImageView
+                    android:id="@+id/imageView11"
+                    android:layout_width="156dp"
+                    android:layout_height="49dp"
+                    android:layout_marginTop="41dp"
+                    android:layout_marginStart="20dp"
+                    app:layout_constraintStart_toEndOf="@+id/constraintLayout7"
+                    app:layout_constraintTop_toBottomOf="@+id/imageViewCard"
+                    app:srcCompat="@drawable/upi" />
+
+                <TextView
+                    android:id="@+id/textViewCardNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dp"
+                    android:text="************"
+                    android:textSize="36px"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="12dp"
+                    app:layout_constraintStart_toEndOf="@+id/imageViewCard"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:text="2212"
+                    android:layout_marginStart="20dp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="24dp"
+                    app:layout_constraintStart_toEndOf="@+id/textViewCardNumber"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textViewCardDetails"
+                    android:layout_width="132dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="Aditya
+Expires 04/2025"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="13dp"
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintStart_toEndOf="@+id/imageViewCard"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewCardNumber" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
