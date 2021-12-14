@@ -28,9 +28,9 @@
                     android:id="@+id/SearchIcon"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:layout_marginStart="326dp"
+                    android:layout_marginEnd="22dp"
                     android:layout_marginTop="24dp"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/bookMarkIcon"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/search" />
 
@@ -38,9 +38,9 @@
                     android:id="@+id/bookMarkIcon"
                     android:layout_width="32dp"
                     android:layout_height="32dp"
-                    android:layout_marginStart="372dp"
                     android:layout_marginTop="20dp"
-                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginEnd="18dp"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/bookmark" />
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -63,13 +63,15 @@
 
                         <TextView
                             android:id="@+id/textViewChooseCategory"
-                            android:layout_width="372dp"
-                            android:layout_height="40dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:layout_marginStart="18dp"
                             android:layout_marginTop="72dp"
+                            android:layout_marginEnd="77dp"
                             android:text="Choose/shop by your Category"
                             android:textColor="@color/white"
                             android:textSize="18sp"
+                            app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
@@ -78,84 +80,89 @@
                             android:layout_width="80dp"
                             android:layout_height="80dp"
                             android:layout_marginStart="16dp"
-                            android:layout_marginTop="102dp"
+                            android:layout_marginTop="30dp"
                             android:src="@drawable/ellipse"
                             app:civ_border_color="#673AB7"
                             app:civ_border_width="2dp"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            app:layout_constraintTop_toBottomOf="@+id/textViewChooseCategory" />
 
-                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        <de.hdodenhof.circleimageview.CircleImageView
                             android:id="@+id/workOutIcon"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:layout_marginStart="122dp"
-                            android:layout_marginTop="102dp"
+                            android:layout_marginStart="26dp"
+                            android:layout_marginTop="30dp"
                             android:src="@drawable/ellipsefour"
                             app:civ_border_color="#673AB7"
                             app:civ_border_width="2dp"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            app:layout_constraintStart_toEndOf="@+id/jewelleryIcon"
+                            app:layout_constraintTop_toBottomOf="@+id/textViewChooseCategory" />
 
                         <de.hdodenhof.circleimageview.CircleImageView
                             android:id="@+id/bookIcon"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:layout_marginStart="236dp"
-                            android:layout_marginTop="102dp"
+                            android:layout_marginStart="26dp"
+                            android:layout_marginTop="30dp"
                             android:src="@drawable/ellipsesix"
                             app:civ_border_color="#673AB7"
                             app:civ_border_width="2dp"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            android:layout_marginEnd="106dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/workOutIcon"
+                            app:layout_constraintTop_toBottomOf="@+id/textViewChooseCategory" />
 
                         <TextView
                             android:id="@+id/textViewJewellery"
-                            android:layout_width="89dp"
-                            android:layout_height="21dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
                             android:layout_marginStart="26dp"
-                            android:layout_marginTop="187dp"
                             android:text="Jewellery"
                             android:textColor="@color/white"
                             android:textSize="14sp"
+
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            app:layout_constraintTop_toBottomOf="@+id/jewelleryIcon" />
 
                         <TextView
                             android:id="@+id/textViewWorkout"
-                            android:layout_width="89dp"
-                            android:layout_height="21dp"
-                            android:layout_marginStart="130dp"
-                            android:layout_marginTop="187dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginTop="4dp"
                             android:text="Workout "
                             android:textColor="@color/white"
                             android:textSize="14sp"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            app:layout_constraintStart_toEndOf="@+id/textViewJewellery"
+                            app:layout_constraintTop_toBottomOf="@+id/workOutIcon" />
 
                         <TextView
                             android:id="@+id/textViewBook"
-                            android:layout_width="89dp"
-                            android:layout_height="21dp"
-                            android:layout_marginStart="245dp"
-                            android:layout_marginTop="187dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:text="Book"
                             android:textColor="@color/white"
                             android:textSize="14sp"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            android:layout_marginTop="5dp"
+                            android:layout_marginStart="60dp"
+                            app:layout_constraintStart_toEndOf="@+id/textViewWorkout"
+                            app:layout_constraintTop_toBottomOf="@+id/bookIcon" />
 
                         <TextView
                             android:id="@+id/textViewBookSuggestion"
-                            android:layout_width="327dp"
-                            android:layout_height="40dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:layout_marginStart="18dp"
-                            android:layout_marginTop="242dp"
+                            android:layout_marginEnd="77dp"
+                            android:layout_marginTop="34dp"
                             android:text="Books for you"
                             android:textColor="@color/white"
                             android:textSize="18sp"
+                            app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            app:layout_constraintTop_toBottomOf="@+id/textViewWorkout" />
 
 
                         <androidx.recyclerview.widget.RecyclerView
@@ -175,20 +182,23 @@
 
                         <TextView
                             android:id="@+id/textViewTodayOffer"
-                            android:layout_width="327dp"
-                            android:layout_height="40dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:layout_marginStart="18dp"
-                            android:layout_marginTop="544dp"
+                            android:layout_marginEnd="77dp"
                             android:text="Today’s Offer"
+                            android:layout_marginTop="31dp"
                             android:textColor="@color/white"
                             android:textSize="18sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/recyclerView"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                           />
 
                         <ImageView
                             android:id="@+id/todayOfferImage"
-                            android:layout_width="372dp"
-                            android:layout_height="270dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:layout_marginStart="19dp"
                             android:layout_marginTop="10dp"
                             android:layout_marginEnd="19dp"

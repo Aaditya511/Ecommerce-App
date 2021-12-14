@@ -2,9 +2,9 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/bg_app_grident"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_app_grident"
     tools:context=".ui.BookOpenActivity">
 
 
@@ -28,16 +28,33 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/go_back" />
 
-        <ImageView
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/circular_bg"
+            android:layout_marginEnd="28dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+            <ImageView
+                android:id="@+id/imageViewShopingBag"
+                android:layout_width="39dp"
+                android:layout_height="50dp"
+                android:padding="4dp"
+                app:srcCompat="@drawable/sbag"/>
+
+        </LinearLayout>
+
+
+     <!--   <ImageView
             android:id="@+id/imageViewShopingBag"
             android:layout_width="39dp"
             android:layout_height="50dp"
-            android:layout_marginStart="306dp"
-            android:layout_marginTop="26dp"
             android:padding="1dp"
-            app:layout_constraintStart_toEndOf="@+id/imageViewBackBtn"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/sbag" />
+            app:srcCompat="@drawable/sbag"
+            tools:layout_editor_absoluteX="358dp"
+            tools:layout_editor_absoluteY="26dp" />-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -47,7 +64,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/topItmIcons" >
+        app:layout_constraintTop_toBottomOf="@+id/topItmIcons">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -60,23 +77,29 @@
                 android:layout_width="210dp"
                 android:layout_height="240dp"
                 android:layout_marginStart="81dp"
+                android:layout_marginEnd="131dp"
                 android:layout_marginTop="26dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/booktwo" />
 
             <TextView
                 android:id="@+id/bookNameTv"
-                android:layout_width="355dp"
-                android:layout_height="42dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="19dp"
+                android:layout_marginEnd="49dp"
                 android:layout_marginTop="108dp"
+                android:maxLines="1"
                 android:padding="2dp"
                 android:text="Steal Like an Artist"
                 android:textColor="#FFFFFF"
                 android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/bookFullIcon" />
+                app:layout_constraintTop_toBottomOf="@+id/bookFullIcon"
+                />
 
             <ImageView
                 android:id="@+id/imageViewStarOne"
@@ -131,47 +154,55 @@
 
             <TextView
                 android:id="@+id/bookDescriptionTv"
-                android:layout_width="173dp"
-                android:layout_height="27dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="19dp"
                 android:layout_marginTop="36dp"
                 android:text="Description"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp"
+                android:layout_marginEnd="230dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageViewStarFour" />
 
             <TextView
                 android:id="@+id/detailDescricptionBookTv"
-                android:layout_width="374dp"
-                android:layout_height="199dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="18dp"
                 android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies neque a egestas consectetur. Maecenas a magna enim. Donec non tempor nisi. Maecenas egestas commodo nibh. Aenean nunc eros, iaculis et efficitur eu, sollicitudin vel dui. Nullam sagittis vitae nulla a tempor. In hac habitasse platea dictumst. Donec congue vitae ligula in accumsan. Nulla mollis lacus non scelerisque tempor. Quisque lectus augue, imperdiet sed ligula ac, blandit rhoncus dolor. Donec orci nulla, blandit quis leo et, convallis vehicula eros. Curabitur et lacinia est. Quisque at erat lectus. Praesent laoreet nisl et enim suscipit, quis aliquam magna fermentum."
                 android:textColor="#FFFFFF"
                 android:textSize="14sp"
+                android:layout_marginEnd="28dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/bookDescriptionTv" />
 
             <TextView
                 android:id="@+id/detailsTv"
-                android:layout_width="173dp"
-                android:layout_height="27dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="21dp"
                 android:layout_marginTop="24dp"
+                android:layout_marginEnd="228dp"
                 android:text="Details"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/detailDescricptionBookTv" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/container"
-                android:layout_width="394dp"
-                android:layout_height="202dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="14dp"
                 android:layout_marginTop="5dp"
+                android:layout_marginEnd="14dp"
                 android:background="@drawable/bg_details"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/detailsTv">
 
@@ -191,13 +222,13 @@
                     android:id="@+id/nameOfBrandTv"
                     android:layout_width="113dp"
                     android:layout_height="24dp"
-                    android:layout_marginStart="57dp"
                     android:layout_marginTop="27dp"
-                    android:text="Lorem ipsum"
+                    android:layout_marginEnd="90dp"
                     android:textColor="#FFFFFF"
                     android:textSize="18sp"
-                    app:layout_constraintStart_toEndOf="@+id/brandTv"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Lorem ipsum" />
 
                 <TextView
                     android:id="@+id/dimensionTv"
@@ -234,6 +265,8 @@
                     android:text="Item weight"
                     android:textColor="#FFFFFF"
                     android:textSize="18sp"
+                    android:layout_marginBottom="31dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/categoryTv"
                     tools:layout_editor_absoluteX="16dp" />
@@ -242,61 +275,69 @@
                     android:id="@+id/weightTv"
                     android:layout_width="113dp"
                     android:layout_height="24dp"
-                    android:layout_marginStart="67dp"
                     android:layout_marginTop="96dp"
-                    android:text="400gm"
+                    tools:text="400gm"
+                    android:layout_marginEnd="90dp"
                     android:textColor="#FFFFFF"
+                    android:layout_marginBottom="31dp"
                     android:textSize="18sp"
-                    app:layout_constraintStart_toEndOf="@+id/itemWeightTv"
-                    app:layout_constraintTop_toBottomOf="@+id/nameOfBrandTv" />
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/nameOfBrandTv"
+                    />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
                 android:id="@+id/similarProductsTv"
-                android:layout_width="173dp"
-                android:layout_height="27dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="29dp"
+                android:layout_marginEnd="229dp"
                 android:text="Similar products"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/container" />
 
             <include
                 android:id="@+id/include"
                 layout="@layout/recylerview_items"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="155dp"
+                android:layout_height="242dp"
                 android:layout_marginStart="22dp"
+                android:layout_marginEnd="245dp"
                 android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/similarProductsTv" />
 
             <TextView
                 android:id="@+id/amountTv"
-                android:layout_width="86dp"
-                android:layout_height="42dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="41dp"
                 android:layout_marginTop="26dp"
                 android:text="349"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp"
+
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/include" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/goToCart"
                 android:layout_width="240dp"
                 android:layout_height="48dp"
-                android:id="@+id/goToCart"
-                android:layout_marginStart="37dp"
                 android:layout_marginTop="22dp"
+                android:layout_marginEnd="18dp"
                 android:background="@drawable/cart_btn_bg"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/amountTv"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/include">
 
                 <TextView

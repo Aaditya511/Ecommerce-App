@@ -20,15 +20,16 @@
 
     <TextView
         android:id="@+id/textViewCheckOut"
-        android:layout_width="355dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="112dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="14dp"
         android:text="Checkout"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
-        app:layout_constraintStart_toEndOf="@+id/backBtnImage"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="164dp" />
 
 
     <ScrollView
@@ -52,10 +53,12 @@
                 android:layout_width="173dp"
                 android:layout_height="27dp"
                 android:layout_marginStart="16dp"
+                android:layout_marginEnd="233dp"
                 android:layout_marginTop="22dp"
                 android:text="Order details"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -83,23 +86,25 @@
 
                 <TextView
                     android:id="@+id/textViewOrderItemName"
-                    android:layout_width="355dp"
-                    android:layout_height="42dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="13dp"
                     android:layout_marginTop="8dp"
                     android:text="Steal Like an Artist"
                     android:textColor="#FFFFFF"
                     android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/orderedItemImage"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/textViewItemPrice"
-                    android:layout_width="175dp"
-                    android:layout_height="33dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
                     android:layout_marginTop="32dp"
                     android:text="459"
+                    android:drawableEnd="@drawable/cent"
                     android:textColor="#FFFA7F"
                     android:textSize="24sp"
                     app:layout_constraintStart_toEndOf="@+id/orderedItemImage"
@@ -166,13 +171,15 @@
 
             <TextView
                 android:id="@+id/textViewAddress"
-                android:layout_width="173dp"
-                android:layout_height="27dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="31dp"
+                android:layout_marginEnd="233dp"
                 android:text="Delivery Address"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
@@ -188,33 +195,38 @@
 
                 <TextView
                     android:id="@+id/textViewUseName"
-                    android:layout_width="114dp"
-                    android:layout_height="19dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="13dp"
+                    android:layout_marginEnd="265dp"
                     android:layout_marginTop="12dp"
                     android:text="Aditya Bhandari"
                     android:textColor="#FFFFFF"
                     android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/textViewUserAddress"
-                    android:layout_width="200dp"
-                    android:layout_height="95dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="13dp"
+                    android:layout_marginEnd="179dp"
                     android:layout_marginTop="3dp"
                     android:text="ZXC Apartment,  3rd floor Paschim Vihar New Delhi, Delhi,110026 Phone number:7865423989"
                     android:textColor="#FFFFFF"
                     android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textViewUseName" />
 
                 <TextView
                     android:id="@+id/textViewEditAddress"
-                    android:layout_width="322dp"
-                    android:layout_height="28dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="23dp"
+                    android:layout_marginEnd="47dp"
                     android:layout_marginTop="13dp"
                     android:background="@drawable/bg_details"
                     android:backgroundTint="#EE6C4D"
@@ -222,14 +234,17 @@
                     android:text="Edit Address"
                     android:textColor="#FFFFFF"
                     android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textViewUserAddress" />
 
                 <TextView
                     android:id="@+id/textViewAddAddress"
-                    android:layout_width="322dp"
-                    android:layout_height="28dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="23dp"
+                    android:layout_marginEnd="47dp"
+
                     android:layout_marginTop="8dp"
                     android:background="@drawable/bg_details"
                     android:backgroundTint="#EEE7E7"
@@ -237,6 +252,7 @@
                     android:text="Add  Address"
                     android:textColor="#000000"
                     android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textViewEditAddress" />
 
@@ -247,10 +263,12 @@
                 android:layout_width="173dp"
                 android:layout_height="27dp"
                 android:layout_marginStart="16dp"
+                android:layout_marginEnd="233dp"
                 android:layout_marginTop="21dp"
                 android:text="Payment Option"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/constraintLayout3" />
 
