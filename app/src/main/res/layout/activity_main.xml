@@ -71,84 +71,26 @@
                             android:text="Choose/shop by your Category"
                             android:textColor="@color/white"
                             android:textSize="18sp"
+                            app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                             />
 
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/jewelleryIcon"
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:layout_marginStart="16dp"
-                            android:layout_marginTop="30dp"
-                            android:src="@drawable/ellipse"
-                            app:civ_border_color="#673AB7"
-                            app:civ_border_width="2dp"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/textViewChooseCategory" />
-
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/workOutIcon"
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:layout_marginStart="26dp"
-                            android:layout_marginTop="30dp"
-                            android:src="@drawable/ellipsefour"
-                            app:civ_border_color="#673AB7"
-                            app:civ_border_width="2dp"
-                            app:layout_constraintStart_toEndOf="@+id/jewelleryIcon"
-                            app:layout_constraintTop_toBottomOf="@+id/textViewChooseCategory" />
-
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/bookIcon"
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:layout_marginStart="26dp"
-                            android:layout_marginTop="30dp"
-                            android:src="@drawable/ellipsesix"
-                            app:civ_border_color="#673AB7"
-                            app:civ_border_width="2dp"
-                            android:layout_marginEnd="106dp"
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/categoryRecylerView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal"
+                            android:padding="2dp"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/workOutIcon"
-                            app:layout_constraintTop_toBottomOf="@+id/textViewChooseCategory" />
-
-                        <TextView
-                            android:id="@+id/textViewJewellery"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginStart="26dp"
-                            android:text="Jewellery"
-                            android:textColor="@color/white"
-                            android:textSize="14sp"
-
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/jewelleryIcon" />
+                            app:layout_constraintTop_toBottomOf="@+id/textViewChooseCategory"
+                            tools:listitem="@layout/category_recylerview_items">
 
-                        <TextView
-                            android:id="@+id/textViewWorkout"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="40dp"
-                            android:layout_marginTop="4dp"
-                            android:text="Workout "
-                            android:textColor="@color/white"
-                            android:textSize="14sp"
-                            app:layout_constraintStart_toEndOf="@+id/textViewJewellery"
-                            app:layout_constraintTop_toBottomOf="@+id/workOutIcon" />
+                        </androidx.recyclerview.widget.RecyclerView>
 
-                        <TextView
-                            android:id="@+id/textViewBook"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Book"
-                            android:textColor="@color/white"
-                            android:textSize="14sp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginStart="60dp"
-                            app:layout_constraintStart_toEndOf="@+id/textViewWorkout"
-                            app:layout_constraintTop_toBottomOf="@+id/bookIcon" />
 
                         <TextView
                             android:id="@+id/textViewBookSuggestion"
@@ -162,7 +104,7 @@
                             android:textSize="18sp"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/textViewWorkout" />
+                            app:layout_constraintTop_toBottomOf="@+id/categoryRecylerView" />
 
 
                         <androidx.recyclerview.widget.RecyclerView
@@ -172,13 +114,11 @@
                             android:orientation="horizontal"
                             android:padding="2dp"
                             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                            app:layout_constraintBottom_toTopOf="@+id/textViewTodayOffer"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.0"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/textViewBookSuggestion"
-                            tools:listitem="@layout/recylerview_items"
-                            />
+                            tools:listitem="@layout/recylerview_items" />
 
                         <TextView
                             android:id="@+id/textViewTodayOffer"

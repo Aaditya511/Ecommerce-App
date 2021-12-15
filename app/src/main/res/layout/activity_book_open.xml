@@ -32,29 +32,29 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="22dp"
-            android:background="@drawable/circular_bg"
             android:layout_marginEnd="28dp"
+            android:background="@drawable/circular_bg"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            >
+            app:layout_constraintTop_toTopOf="parent">
+
             <ImageView
                 android:id="@+id/imageViewShopingBag"
                 android:layout_width="39dp"
                 android:layout_height="50dp"
                 android:padding="4dp"
-                app:srcCompat="@drawable/sbag"/>
+                app:srcCompat="@drawable/sbag" />
 
         </LinearLayout>
 
 
-     <!--   <ImageView
-            android:id="@+id/imageViewShopingBag"
-            android:layout_width="39dp"
-            android:layout_height="50dp"
-            android:padding="1dp"
-            app:srcCompat="@drawable/sbag"
-            tools:layout_editor_absoluteX="358dp"
-            tools:layout_editor_absoluteY="26dp" />-->
+        <!--   <ImageView
+               android:id="@+id/imageViewShopingBag"
+               android:layout_width="39dp"
+               android:layout_height="50dp"
+               android:padding="1dp"
+               app:srcCompat="@drawable/sbag"
+               tools:layout_editor_absoluteX="358dp"
+               tools:layout_editor_absoluteY="26dp" />-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -77,29 +77,28 @@
                 android:layout_width="210dp"
                 android:layout_height="240dp"
                 android:layout_marginStart="81dp"
-                android:layout_marginEnd="131dp"
                 android:layout_marginTop="26dp"
+                android:layout_marginEnd="131dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/booktwo" />
+                tools:src="@drawable/booktwo" />
 
             <TextView
                 android:id="@+id/bookNameTv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="19dp"
-                android:layout_marginEnd="49dp"
                 android:layout_marginTop="108dp"
+                android:layout_marginEnd="49dp"
                 android:maxLines="1"
                 android:padding="2dp"
-                android:text="Steal Like an Artist"
                 android:textColor="#FFFFFF"
                 android:textSize="24sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/bookFullIcon"
-                />
+                tools:text="@string/bookName" />
 
             <ImageView
                 android:id="@+id/imageViewStarOne"
@@ -158,10 +157,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="19dp"
                 android:layout_marginTop="36dp"
-                android:text="Description"
+                android:layout_marginEnd="230dp"
+                android:text="@string/bookDescription"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp"
-                android:layout_marginEnd="230dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageViewStarFour" />
@@ -172,13 +171,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="18dp"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies neque a egestas consectetur. Maecenas a magna enim. Donec non tempor nisi. Maecenas egestas commodo nibh. Aenean nunc eros, iaculis et efficitur eu, sollicitudin vel dui. Nullam sagittis vitae nulla a tempor. In hac habitasse platea dictumst. Donec congue vitae ligula in accumsan. Nulla mollis lacus non scelerisque tempor. Quisque lectus augue, imperdiet sed ligula ac, blandit rhoncus dolor. Donec orci nulla, blandit quis leo et, convallis vehicula eros. Curabitur et lacinia est. Quisque at erat lectus. Praesent laoreet nisl et enim suscipit, quis aliquam magna fermentum."
+                android:layout_marginEnd="28dp"
                 android:textColor="#FFFFFF"
                 android:textSize="14sp"
-                android:layout_marginEnd="28dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/bookDescriptionTv" />
+                app:layout_constraintTop_toBottomOf="@+id/bookDescriptionTv"
+                tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies neque a egestas consectetur. Maecenas a magna enim. Donec non tempor nisi. Maecenas egestas commodo nibh. Aenean nunc eros, iaculis et efficitur eu, sollicitudin vel dui. Nullam sagittis vitae nulla a tempor. In hac habitasse platea dictumst. Donec congue vitae ligula in accumsan. Nulla mollis lacus non scelerisque tempor. Quisque lectus augue, imperdiet sed ligula ac, blandit rhoncus dolor. Donec orci nulla, blandit quis leo et, convallis vehicula eros. Curabitur et lacinia est. Quisque at erat lectus. Praesent laoreet nisl et enim suscipit, quis aliquam magna fermentum." />
 
             <TextView
                 android:id="@+id/detailsTv"
@@ -187,7 +186,7 @@
                 android:layout_marginStart="21dp"
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="228dp"
-                android:text="Details"
+                android:text="@string/productDetails"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -208,11 +207,11 @@
 
                 <TextView
                     android:id="@+id/brandTv"
-                    android:layout_width="113dp"
-                    android:layout_height="24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="27dp"
-                    android:text="Brand"
+                    android:text="@string/productBrand"
                     android:textColor="#FFFFFF"
                     android:textSize="18sp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -220,8 +219,8 @@
 
                 <TextView
                     android:id="@+id/nameOfBrandTv"
-                    android:layout_width="113dp"
-                    android:layout_height="24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="27dp"
                     android:layout_marginEnd="90dp"
                     android:textColor="#FFFFFF"
@@ -232,11 +231,11 @@
 
                 <TextView
                     android:id="@+id/dimensionTv"
-                    android:layout_width="113dp"
-                    android:layout_height="24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="16dp"
-                    android:text="Dimension"
+                    android:text="@string/productDimension"
                     android:textColor="#FFFFFF"
                     android:textSize="18sp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -245,11 +244,11 @@
 
                 <TextView
                     android:id="@+id/categoryTv"
-                    android:layout_width="113dp"
-                    android:layout_height="24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="16dp"
-                    android:text="Category"
+                    android:text="@string/productCategory"
                     android:textColor="#FFFFFF"
                     android:textSize="18sp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -258,14 +257,14 @@
 
                 <TextView
                     android:id="@+id/itemWeightTv"
-                    android:layout_width="113dp"
-                    android:layout_height="24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="16dp"
-                    android:text="Item weight"
+                    android:layout_marginBottom="31dp"
+                    android:text="@string/productWeight"
                     android:textColor="#FFFFFF"
                     android:textSize="18sp"
-                    android:layout_marginBottom="31dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/categoryTv"
@@ -273,18 +272,17 @@
 
                 <TextView
                     android:id="@+id/weightTv"
-                    android:layout_width="113dp"
-                    android:layout_height="24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="96dp"
-                    tools:text="400gm"
                     android:layout_marginEnd="90dp"
-                    android:textColor="#FFFFFF"
                     android:layout_marginBottom="31dp"
+                    android:textColor="#FFFFFF"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/nameOfBrandTv"
-                    />
+                    tools:text="400gm" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -306,11 +304,11 @@
             <include
                 android:id="@+id/include"
                 layout="@layout/recylerview_items"
-                android:layout_width="155dp"
-                android:layout_height="242dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="22dp"
-                android:layout_marginEnd="245dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginEnd="245dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/similarProductsTv" />
