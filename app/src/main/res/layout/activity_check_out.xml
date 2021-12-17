@@ -52,8 +52,8 @@
 
             <TextView
                 android:id="@+id/textViewOrderDetails"
-                android:layout_width="173dp"
-                android:layout_height="27dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="22dp"
                 android:layout_marginEnd="233dp"
@@ -94,12 +94,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="13dp"
                     android:layout_marginTop="8dp"
-                    tools:text="@string/bookName"
                     android:textColor="#FFFFFF"
                     android:textSize="18sp"
-                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/orderedItemImage"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="@string/bookName" />
 
                 <TextView
                     android:id="@+id/textViewItemPrice"
@@ -129,7 +128,7 @@
                 <TextView
                     android:id="@+id/textViewQuantity"
                     android:layout_width="wrap_content"
-                    android:layout_height="27dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="9dp"
                     android:layout_marginTop="3dp"
                     android:layout_marginBottom="3dp"
@@ -144,11 +143,9 @@
                     android:id="@+id/plusIcon"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:layout_marginEnd="180dp"
                     android:layout_marginStart="9dp"
                     android:layout_marginTop="3dp"
                     android:layout_marginBottom="3dp"
-                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/textViewQuantity"
                     app:layout_constraintTop_toBottomOf="@+id/textViewItemPrice"
@@ -158,14 +155,12 @@
                     android:id="@+id/bucketIcon"
                     android:layout_width="32dp"
                     android:layout_height="32dp"
-                    android:layout_marginStart="136dp"
-                    android:layout_marginTop="3dp"
-                    android:layout_marginEnd="22dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="22dp"
                     android:background="@drawable/circular_bg"
                     android:gravity="center"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/plusIcon"
-                    app:layout_constraintTop_toBottomOf="@+id/textViewItemPrice">
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
 
                     <ImageView
                         android:layout_width="24dp"
@@ -256,7 +251,6 @@
                     android:layout_marginBottom="16dp"
                     app:layout_constraintBottom_toBottomOf="@+id/constraintLayout3"
                     android:layout_marginTop="8dp"
-
                     android:layout_marginEnd="47dp"
                     android:background="@drawable/bg_details"
                     android:backgroundTint="#EEE7E7"
@@ -272,8 +266,8 @@
 
             <TextView
                 android:id="@+id/textViewPaymentOption"
-                android:layout_width="173dp"
-                android:layout_height="27dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="21dp"
                 android:layout_marginEnd="233dp"
@@ -391,5 +385,3 @@ Expires 04/2025"
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-
